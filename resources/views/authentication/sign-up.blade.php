@@ -9,10 +9,14 @@
 	<div class="row">
 		<div class="col-12 sign-in">
 			<div class="text-center">
-				<h1>Iniciar Sesión</h1>
+				<h1>Registro de Usuario</h1>
 				<p>Bienvenido esperamos que tu encuentres lo que buscas.</p>
 			</div>
 			<form>
+				<div class="from-group">
+					<label for="name"><b>Nombre</b></label>
+					<input type="text" name="name" id="name" class="form-control" required>
+				</div>
 				<div class="form-group">
 					<label for="email"><b>E-mail</b></label>
 					<input type="email" name="email" id="email" class="form-control" placeholder="Ingrese el correo electrónico" required>
@@ -24,12 +28,8 @@
 				</div>
 				<button class="btn btn-primary complete-btn">Ingresar</button>
 			</form>
-			<span class="message-sign-up">No tienes cuenta?. Registrate <a href="{{ URL('sign-up') }}">AQUÍ</a></span>
+			<span class="message-sign-up">Ya tienes cuenta?. Ingresa <a href="{{ URL('login') }}">AQUÍ</a></span>
 		</div>
 	</div>
 </div>
-@endsection
-
-@section('custom_js')
-<script type="text/javascript" src="./js/login.js"></script>
 @endsection

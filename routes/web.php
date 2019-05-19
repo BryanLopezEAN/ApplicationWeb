@@ -18,3 +18,12 @@ $router->get('/', function () {
 $router->get('login', function(){
 	return view('authentication.login');
 });
+
+/* Registro de usuario - Vista - Luis Arias*/
+$router->get('sign-up', function(){
+	return view('authentication.sign-up');
+});
+
+$router->get('reservation-form', function(){
+	return view('reservation.form');
+});
