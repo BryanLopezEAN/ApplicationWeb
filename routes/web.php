@@ -14,3 +14,7 @@
 $router->get('/', function () {
     return view('home.index');
 });
+
+$router->get('login', function(){
+	return view('authentication.login');
+});
