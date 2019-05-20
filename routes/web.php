@@ -27,3 +27,11 @@ $router->get('sign-up', function(){
 $router->get('reservation-form', function(){
 	return view('reservation.form');
 });
+
+$router->get('scenarios', function(){
+	return view('reservation.list');
+});
+
+$router->get('alfa', function(){
+	return view('scenarios.alfa');
+});
