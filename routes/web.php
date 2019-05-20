@@ -35,3 +35,7 @@ $router->get('scenarios', function(){
 $router->get('alfa', function(){
 	return view('scenarios.alfa');
 });
+
+$router->get('event1', function(){
+	return view('events.event');
+});
