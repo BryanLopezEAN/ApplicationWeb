@@ -38,7 +38,8 @@
 					<p>Empresa especializada en reservas y adquisición de espacios en corferias, que nacio en el año 2018 a partir de los problemas de contacto con corferias. Actualmente somos los únicos prestadores de este servicio.</p>
 				</div>
 				<div class="col-md-4 col-sm-12">
-					MAPA
+					<h2>Mapa de google <h2>
+					<div id="map"></div>
 				</div>
 				<div class="col-md-4 col-sm-12">
 					<table>
@@ -71,6 +72,72 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<script>
+    function initMap(){
+  
+      var options = {
+       
+		zoom:16,
+        center:{lat: 4.6296700,lng:-74.0904500 }
+      }
+
+ 
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+      google.maps.event.addListener(map, 'click', function(event){
+  
+      
+      });
+
+
+    
+      var markers = [
+        {
+          coords:{lat: 4.6296700,lng:-74.0904500 },
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h4>Centro de convenciones Corferias</h4>'
+        }
+      ];
+
+    
+      for(var i = 0;i < markers.length;i++){
+
+        addMarker(markers[i]);
+      }
+
+  
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+       
+        });
+
+   
+        if(props.iconImage){
+     
+          marker.setIcon(props.iconImage);
+        }
+
+
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4lOLe8XxFnB1npXkHuiR-XiOPTQBeb0g&callback=initMap"> </script>
+
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
