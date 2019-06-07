@@ -36,3 +36,10 @@ body {
 	background-color: rgb(49, 49, 49);
 	color: #f7f7f7;
 }
+
+#map{
+	height: 182px !important;
+	width: 340px !important;
+
+
+}
