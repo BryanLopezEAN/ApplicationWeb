@@ -18,7 +18,7 @@
 						<figcaption class="figure-caption">{{ $scenario['name'] }}</figcaption>
 					<figure class="figure">
 					<div class="text-center button-margin">
-						<button class="btn btn-success">Rentar</button>
+						<a href="{{ url('scenarios', ['type' => $scenario['key']]) }}/reservation-form" class="btn btn-success">Rentar</a>
 						<a href="{{ url('scenarios', ['type' => $scenario['key']]) }}" class="btn btn-primary">Más info</a>
 					</div>
 				</div>

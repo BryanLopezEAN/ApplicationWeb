@@ -11,10 +11,6 @@
 |
 */
 
-/*$router->get('/', function () {
-    return view('home.index');
-});*/
-
 $router->get('/', 'IndexController@listEvents');
 
 $router->get('login', function(){
@@ -26,24 +22,12 @@ $router->get('sign-up', function(){
 	return view('authentication.sign-up');
 });
 
-$router->get('reservation-form', function(){
-	return view('reservation.form');
-});
-
 $router->post('reserved', 'ReservationController@reserved');
 
 $router->get('scenarios', 'ScenariosController@scenarios');
 
-/*$router->get('scenarios', function(){
-	return view('reservation.list');
-});*/
-
 $router->get('scenarios/{type}', 'ScenariosController@type');
 
-/*$router->get('alfa', function(){
-	return view('scenarios.alfa');
-});*/
+$router->get('scenarios/{type}/reservation-form', 'ScenariosController@reservation');
 
-$router->get('event1', function(){
-	return view('events.event');
-});
+$router->get('events/{id}', 'EventsController@event');

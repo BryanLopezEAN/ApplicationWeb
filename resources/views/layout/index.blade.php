@@ -20,6 +20,11 @@
 		      <li class="nav-item active">
 		        <a class="nav-link nav-color" href="/">Inicio <span class="sr-only">(current)</span></a>
 		      </li>
+		      <!-- Validar cuando el usuario este logeado -->
+		      <li class="nav-item active">
+		        <a class="nav-link nav-color" href="{{ url('scenarios') }}">Escenarios</a>
+		      </li>
+		      
 		      <li class="nav-item">
 		        <a class="nav-link nav-color" href="{{ URL('login') }}">Iniciar Sesión</a>
 		      </li>

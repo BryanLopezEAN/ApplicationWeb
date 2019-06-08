@@ -31,5 +31,5 @@
 @endsection
 
 @section('custom_js')
-<script type="text/javascript" src="./js/login.js"></script>
+<script type="text/javascript" src="{{ url('/js/login.js') }}"></script>
 @endsection

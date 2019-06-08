@@ -9,15 +9,15 @@
 	<div class="container sign-up">
 		<div class="row">
 			<div class="col-lg-12 col-sm-12">
-				<h1>Escenario 1 - ALFA</h1>
+				<h1>{{ $data['name'] }}</h1>
 			</div>
 
 			<div class="col-lg-8 col-sm-12 characteristics">
 				<h2>Características del pabellón</h2>
 				<ul>
-					<li>Amplio Espacio para eventos de más de 500 personas.</li>
-					<li>Cuenta con tarima para eventos de 100 metros</li>
-					<li>Cuenta con 5 camerinos y baños privados para los camerinos</li>
+					<li>{{ $data['desc1']}}</li>
+					<li>{{ $data['desc2']}}</li>
+					<li>{{ $data['desc3']}}</li>
 				</ul>
 			</div>
 			<div class="col-lg-4 col-sm-12">
@@ -28,7 +28,7 @@
 				</div>
 				<div class="text-right">
 					<h2 class="red-word">PRECIO</h2>
-					<span>$15.000.000 COP</span>
+					<span>${{ $data['price'] }}</span>
 				</div>
 			</div>
 
@@ -67,5 +67,5 @@
 @endsection
 
 @section('custom_js')
-<script type="text/javascript" src="./js/reservation-form.js"></script>
+<script type="text/javascript" src="{{ url('/js/reservation-form.js') }}"></script>
 @endsection

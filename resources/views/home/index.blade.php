@@ -1,7 +1,7 @@
 @extends('layout.index')
 
 @section('custom_css')
-<link rel="stylesheet" type="text/css" href="./css/home.css">
+<link rel="stylesheet" type="text/css" href="{{ url('/css/home.css') }}">
 @endsection
 
 @section('content')
@@ -52,7 +52,7 @@
 			@foreach($events as $event)
 				<div class="col-lg-6 col-sm-12">
 					<img src="{{ $event['img'] }}" alt="Evento 1" class="events titles">
-					<h3>{{ $event['name'] }}</h3>
+					<h3><a href="{{ url('events', ['id' => $event['key']]) }}" class="link-event">{{ $event['name'] }}</a></h3>
 					<p>{{ $event['description'] }}</p>
 				</div>
 			@endforeach
