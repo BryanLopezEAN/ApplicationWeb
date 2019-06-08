@@ -1,7 +1,7 @@
 @extends('layout.index')
 
 @section('custom_css')
-<link rel="stylesheet" type="text/css" href="./css/list.css">
+<link rel="stylesheet" type="text/css" href="{{ url('/css/list.css') }}">
 @endsection
 
 @section('content')
@@ -13,7 +13,7 @@
 
 			<div class="col-lg-6 col-sm-12">
 				<figure class="figure">
-					<img src="./images/slide1.jpg">
+					<img src="{{ url('/images/slide1.jpg') }}">
 					<figcaption class="figure-caption">Escenario 1 - Alfa</figcaption>
 				<figure class="figure">
 				<div class="text-center button-margin">
@@ -23,7 +23,7 @@
 			</div>
 			<div class="col-lg-6 col-sm-12">
 				<figure class="figure">
-					<img src="./images/slide2.jpg">
+					<img src="{{ url('/images/slide2.jpg') }}">
 					<figcaption class="figure-caption">Escenario 2 - Beta</figcaption>
 				<figure class="figure">
 				<div class="text-center button-margin">
@@ -33,7 +33,7 @@
 			</div>
 			<div class="col-lg-6 col-sm-12">
 				<figure class="figure">
-					<img src="./images/slide3.jpg">
+					<img src="{{ url('/images/slide3.jpg') }}">
 					<figcaption class="figure-caption">Escenario 3 - Omega</figcaption>
 				<figure class="figure">
 				<div class="text-center button-margin">
@@ -43,7 +43,7 @@
 			</div>
 			<div class="col-lg-6 col-sm-12">
 				<figure class="figure">
-					<img src="./images/slide1.jpg">
+					<img src="{{ url('/images/slide1.jpg') }}">
 					<figcaption class="figure-caption">Escenario 4 - Metro</figcaption>
 				<figure class="figure">
 				<div class="text-center button-margin">

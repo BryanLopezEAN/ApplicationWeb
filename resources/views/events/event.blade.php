@@ -1,7 +1,7 @@
 @extends('layout.index')
 
 @section('custom_css')
-<link rel="stylesheet" type="text/css" href="./css/event.css">
+<link rel="stylesheet" type="text/css" href="{{ url('/css/event.css') }}">
 @endsection
 
 @section('content')

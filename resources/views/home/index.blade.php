@@ -48,17 +48,14 @@
 				<h2>Eventos</h2>
 				<p>Descubre cuáles son nuestros siguientes eventos</p>
 			</div>
-			
-			<div class="col-lg-6 col-sm-12">
-				<img src="./images/event1.jpg" alt="Evento 1" class="events titles">
-				<h3>Evento de comics</h3>
-				<p>Evento de actividades de comics, disfraz, comida, charlas, etc</p>
-			</div>
-			<div class="col-lg-6 col-sm-12">
-				<img src="./images/event2.jpg" alt="Evento 2" class="events titles">
-				<h3>Evento de comida</h3>
-				<p>Evento en el cuál aprenderas a cocinar y realizar tus platillos favoritos</p>
-			</div>	
+
+			@foreach($events as $event)
+				<div class="col-lg-6 col-sm-12">
+					<img src="{{ $event['img'] }}" alt="Evento 1" class="events titles">
+					<h3>{{ $event['name'] }}</h3>
+					<p>{{ $event['description'] }}</p>
+				</div>
+			@endforeach
 		</div>
 	</div>
 </div>

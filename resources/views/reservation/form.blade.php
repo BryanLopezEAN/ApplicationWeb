@@ -1,7 +1,7 @@
 @extends('layout.index')
 
 @section('custom_css')
-<link rel="stylesheet" type="text/css" href="./css/reservation.css">
+<link rel="stylesheet" type="text/css" href="{{ url('/css/reservation.css') }}">
 @endsection
 
 @section('content')
@@ -34,10 +34,10 @@
 
 			<div class="col-lg-12 col-sm-12 form-reservation">
 				<h1 class="text-center">Reservación</h1>
-				<form>
+				<form action="{{ URL('reserved') }}" id="reser">
 					<div class="form-group">
 						<label for="event-type"><b>Tipo de evento</b></label>
-						<input type="text" name="event-type" id="event-type" class="form-control" placeholder="Tipo de evento que va a realizar" required>
+						<input type="text" name="event-type" id="event-type" class="form-control" placeholder="Evento de comics" required>
 					</div>
 					<div class="form-group">
 						<label for="phone"><b>Teléfono</b></label>
@@ -52,8 +52,8 @@
 						<input type="date" name="date-end" id="date-end" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label for="description"><b>Qué es lo que necesitas?</b></label>
-						<textarea id="description" name="description" class="form-control" placeholder="Cuéntanos con detalle que necesitas y como lo necesitas"></textarea>
+						<label for="description"><b>Descripción del evento</b></label>
+						<textarea id="description" name="description" class="form-control" placeholder="Detalla cuál es el objetivo del evento."></textarea>
 					</div>
 					
 					<div class="col-lg-12 col-sm-12 text-right">
