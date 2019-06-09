@@ -51,7 +51,7 @@
 
 			@foreach($events as $event)
 				<div class="col-lg-6 col-sm-12">
-					<img src="{{ $event['img'] }}" alt="Evento 1" class="events titles">
+					<img src="{{ url('/images/event1.jpg') }}{{-- $event['img'] --}}" alt="Evento 1" class="events titles">
 					<h3><a href="{{ url('events', ['id' => $event['key']]) }}" class="link-event">{{ $event['name'] }}</a></h3>
 					<p>{{ $event['description'] }}</p>
 				</div>

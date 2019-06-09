@@ -35,6 +35,7 @@
 			<div class="col-lg-12 col-sm-12 form-reservation">
 				<h1 class="text-center">Reservación</h1>
 				<form action="{{ URL('reserved') }}" id="reser">
+					<input type="hidden" name="type" value="{{ $data['stand_key'] }}">
 					<div class="form-group">
 						<label for="event-type"><b>Tipo de evento</b></label>
 						<input type="text" name="event-type" id="event-type" class="form-control" placeholder="Evento de comics" required>
